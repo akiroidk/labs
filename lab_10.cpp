@@ -4,17 +4,19 @@
 using namespace std;
 
 int main() {
-    ifstream file("data.txt"); // входные данные
-    ofstream fout("output.txt"); // выходные данные
+    setlocale( LC_ALL,"Russian" );
+    ifstream file("data.txt"); // РѕС‚РєСѓРґР° Р±РµСЂС‘Рј РґР°РЅРЅС‹Рµ
+    ofstream fout("output.txt"); // РєСѓРґР° РґР°РЅРЅС‹Рµ РѕС‚РїСЂР°РІР»СЏРµРј
     string data;
-    getline(file, data);// считывает целую строку
-    for (int i = 0; i < data.length(); i++) { // выполнит столькораз, сколько символов в строке
+    getline(file, data); // РёР·РІР»РµРєР°РµС‚ РґР°РЅРЅС‹Рµ РёР· РІС…РѕРґРЅРѕРіРѕ РїРѕС‚РѕРєР° РґРѕ СЃС‚СЂРѕРєРѕРІРѕРіРѕ СЂР°Р·РґРµР»РёС‚РµР»СЏ, РіСЂСѓР±Рѕ РіРѕРІРѕСЂСЏ РїРѕС…РѕР¶Рµ РЅР° cin
+    for (int i = 0; i < data.length(); i++) { //
         if (data[i] == data[i + 1]) {
 
-            fout <<data[i] << data[i + 1]<< " ";
+            fout <<data[i] << data[i + 1]<< " "; // Р·Р°РїРёСЃС‹РІР°РµС‚ РІ output.txt РґРІР° РѕРґРёРЅР°РєРѕРІС‹С… СЃРѕСЃРµРґРЅРёС… СЃРёРјРІРѕР»Р°
+
 
         }
 
     }
-    cout <<"текст обработан "<< endl;
+    cout <<"РІС‹РїРѕР»РЅРµРЅРѕ"<< endl;
 }
